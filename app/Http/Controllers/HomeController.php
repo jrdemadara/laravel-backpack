@@ -11,7 +11,6 @@ class HomeController extends Controller
     {
         $contacts = Contact::select('id', 'name', 'email', 'image')->get();
 
-        // Add full URL for image
         $contacts->transform(function ($contact) {
             $contact->image_url = $contact->image ? asset('storage/'.$contact->image) : null;
             return $contact;

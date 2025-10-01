@@ -65,8 +65,8 @@ class ContactCrudController extends CrudController
              ->type('upload')
              ->label('Profile Image')
              ->withFiles([
-                 'disk' => 'public',  // uses storage/app/public
-                 'path' => 'contacts' // files will go to storage/app/public/contacts
+                 'disk' => 'public',
+                 'path' => 'contacts'
              ]);
      }
 

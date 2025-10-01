@@ -22,22 +22,17 @@ const props = defineProps<{
     </Head>
 
     <div class="flex w-screen flex-col justify-center p-6">
-        <!-- Page Title -->
         <h1 class="mb-6 text-3xl font-bold">Contact List</h1>
 
-        <!-- Contacts Grid -->
         <div class="grid grid-rows-1 gap-2">
             <div
                 v-for="c in props.contacts"
                 :key="c.id"
                 class="flex items-center gap-4 rounded-2xl bg-white p-4 shadow-md transition hover:shadow-lg"
             >
-                <!-- Avatar -->
                 <img v-if="c.image_url" :src="c.image_url" alt="Avatar" class="h-16 w-16 rounded-full border object-cover" />
                 <div>
-                    <!-- Name -->
                     <h2 class="text-lg font-semibold text-gray-800 capitalize">{{ c.name }}</h2>
-                    <!-- Email -->
                     <p class="text-sm text-gray-500">{{ c.email }}</p>
                 </div>
             </div>
